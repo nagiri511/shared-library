@@ -2,7 +2,7 @@
 
 import org.apache.commons.lang.StringUtils
 
-def callff(String filter_string, int occurrence) {
+def call(String filter_string, int occurrence) {
     def logs = currentBuild.rawBuild.getLog(10000).join('\n')
     int count = StringUtils.countMatches(logs, filter_string);
     if (count > occurrence -1) {
